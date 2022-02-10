@@ -1,8 +1,17 @@
-import { CartPage, CheckoutPage, HomePage, ProductPage } from "../pages";
+import {
+  CartPage,
+  CheckoutPage,
+  HomePage,
+  ProductPage,
+  AboutPage,
+  ContactPage,
+} from "../pages";
 
 export const ROUTES = {
   root: { Component: HomePage, element: "/" },
-  checkout: { Component: CheckoutPage, element: "/checkout" },
-  product: { Component: ProductPage, element: "/product" },
   cart: { Component: CartPage, element: "/cart" },
+  about: { Component: AboutPage, element: "/about" },
+  contact: { Component: ContactPage, element: "/contact" },
+  product: { Component: ProductPage, element: "/product" },
+  checkout: { Component: CheckoutPage, element: "/checkout" },
 };
