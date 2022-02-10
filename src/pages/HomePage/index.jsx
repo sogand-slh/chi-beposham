@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 //Add other component
 import HeroSlider from "../../components/HeroSlider";
 import HeroImage from "../../assets/images/hi-2.jpg";
-
 const Home = () => {
   const [data, setData] = useState();
   const getProduct = () => {
