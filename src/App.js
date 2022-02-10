@@ -7,9 +7,9 @@ import { RouterSwitch } from "./router/RouterSwitch";
 function App() {
   return (
     <BrowserRouter>
-      <div className="w-full h-screen">
+      <div className="w-full h-screen flex flex-col justify-between">
         <Header />
-        <main>
+        <main className="flex flex-col justify-between">
           <RouterSwitch />
         </main>
         <Footer />
