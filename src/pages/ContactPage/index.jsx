@@ -37,15 +37,12 @@ const ContactPage = () => {
         </div>
         <div className="flex w-[350px] h-[350px] flex-col   p-5 self-center bg-inputColor text-lightColor">
           <span>
-            <h1 className="text-lg font-medium text-center divide-y-4 divide-green-500">
-              Contact Info
-            </h1>
+            <h1 className="text-lg font-medium text-center">Contact Info</h1>
           </span>
-
           <div className="flex flex-col  p-2 ">
-            <span className="flex flex-row p-2 ">
+            <span className="flex flex-row p-2">
               <p className="text-lg ">Address:</p>
-              <p className="text-base pl-2 ">
+              <p className="text-base pl-2">
                 Vakil Abad Avenue, Haft Tir Armitaj Tower
               </p>
             </span>
