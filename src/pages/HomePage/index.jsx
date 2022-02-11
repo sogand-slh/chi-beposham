@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 //Add other component
-import HeroSlider from "../../components/HeroSlider";
 import HeroImage from "../../assets/images/hi-2.jpg";
 
 const Home = () => {
@@ -22,7 +21,6 @@ const Home = () => {
       <div className="w-full h-full p-2 flex justify-between items-center ">
         <img src={HeroImage} alt="" />
       </div>
-      <HeroSlider />
       <div>{"info"}</div>
       <div>{data?.[0]?.price}</div>
     </>

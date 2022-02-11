@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <div className="w-full h-[4rem] ">
+      <div className="w-full h-[4rem] bg-lightColor text-darkColor">
         <div className="w-full h-full p-2 flex justify-between items-center ">
           <div className="flex justify-between items-center">
             <span className="px-5">
