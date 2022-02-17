@@ -1,30 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { getProduct } from "../../Services/API";
 
 const Product = () => {
-  const [isData, setIsData] = useState();
   const [showFilterBox, setShowFilterBox] = useState(true);
-  const [data, setData] = useState();
-  // const getProduct = () => {
-  //   fetch("https://fakestoreapi.com/products")
-  //     .then((res) => res.json())
-  //     .then((json) => setData(json));
-  // };
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     getProduct();
-  //   }, 1000);
-  // }, []);
-  const fetchData = () => {
-    axios
-      .get("https://fakestoreapi.com/products")
-      .then((res) => setIsData(res?.data));
-  };
   useEffect(() => {
-    fetchData();
+    const fetchAPI = async () => {
+      const data = await getProduct();
+      console.log(data);
+    };
+    fetchAPI();
   }, []);
-  console.log(isData);
+
   return (
     <div className="container flex flex-col mx-auto px-[2%]">
       <div className="border-b-4 border-darkColor">
@@ -45,12 +33,12 @@ const Product = () => {
             style={{ display: `${showFilterBox ? `flex` : `none`}` }}></div>
         </div>
         <div className="m-5 flex flex-row ">
-          {isData?.map((elem) => (
+          {/* {isData?.map((elem) => (
             <div className="flex flex-col  m-5 w-[200px] h-[200px]">
               <img alt="" src={elem.image} />
               <span>{elem.title}</span>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </div>
