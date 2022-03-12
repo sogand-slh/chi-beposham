@@ -4,11 +4,11 @@ import { getProduct } from "../../Services/API";
 
 const Product = () => {
   const [showFilterBox, setShowFilterBox] = useState(true);
-
+  const [data, setData] = useState();
   useEffect(() => {
     const fetchAPI = async () => {
-      const data = await getProduct();
-      console.log(data);
+      const respond = await getProduct();
+      setData(respond);
     };
     fetchAPI();
   }, []);
@@ -21,7 +21,7 @@ const Product = () => {
         </span>
       </div>
       <div className="my-5 flex flex-row">
-        <div>
+        {/*<div>
           <button
             className="flex flex-row"
             onClick={() => setShowFilterBox(!showFilterBox)}>
@@ -29,16 +29,16 @@ const Product = () => {
             <p className="px-2">{showFilterBox ? "Hide" : "Show"} Filters</p>
           </button>
           <div
-            className="w-[250px] bg-lightColor h-[450px] "
+            className="w-[250px] bg-lightColor h-[90%] "
             style={{ display: `${showFilterBox ? `flex` : `none`}` }}></div>
-        </div>
-        <div className="m-5 flex flex-row ">
-          {/* {isData?.map((elem) => (
-            <div className="flex flex-col  m-5 w-[200px] h-[200px]">
-              <img alt="" src={elem.image} />
-              <span>{elem.title}</span>
+        </div> */}
+        <div className="m-5 grid grid-cols-4 gap-1">
+          {data?.map((elem) => (
+            <div className="flex flex-col flex-1 flex-wrap p-2 justify-between items-center m-5 w-[250px] bg-[white] h-[300px]">
+              <img alt="" src={elem.image} className="w-[125px] h-[125px]" />
+              <span>{elem.title.substring(0, 3)}</span>
             </div>
-          ))} */}
+          ))}
         </div>
       </div>
     </div>
