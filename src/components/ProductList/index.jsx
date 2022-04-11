@@ -1,26 +1,19 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { getProduct } from "../../Services/API";
 
-const Product = () => {
+// Functions
+import { shorten, isInCart, quantityCount } from "../../helper/functions";
+// Components
+import Loader from "../Loader";
+
+const Product = ({productsData}) => {
   const [showFilterBox, setShowFilterBox] = useState(true);
   const [data, setData] = useState();
-  useEffect(() => {
-    const fetchAPI = async () => {
-      const respond = await getProduct();
-      setData(respond);
-    };
-    fetchAPI();
-  }, []);
 
+console.log(productsData,"productsData");
   return (
-    <div className="container flex flex-col mx-auto px-[2%]">
-      <div className="border-b-4 border-darkColor">
-        <span className="text-center font-bold text-3xl text-darkColor ">
-          <h1>ALL PRODUCTS</h1>
-        </span>
-      </div>
-      <div className="my-5 flex flex-row">
+    <div className="container mx-auto px-[2%]">
+      
+      <div className="my-5 ">
         {/*<div>
           <button
             className="flex flex-row"
@@ -32,14 +25,20 @@ const Product = () => {
             className="w-[250px] bg-lightColor h-[90%] "
             style={{ display: `${showFilterBox ? `flex` : `none`}` }}></div>
         </div> */}
-        <div className="m-5 grid grid-cols-4 gap-1">
-          {data?.map((elem) => (
+       
+          {/* {productsData?.map((elem) => ( */}
             <div className="flex flex-col flex-1 flex-wrap p-2 justify-between items-center m-5 w-[250px] bg-[white] h-[300px]">
-              <img alt="" src={elem.image} className="w-[125px] h-[125px]" />
-              <span>{elem.title.substring(0, 3)}</span>
+              <img alt="" src={productsData.image} className="w-[125px] h-[125px]" />
+              <span>{productsData.title.substring(0, 3)}</span>
+              <span>
+              <button ><i class="fa-solid fa-minus bg-zinc-200 p-1"></i></button>
+              <span className="p-2">{productsData.price}</span>
+              <button ><i class="fa-solid fa-plus bg-zinc-200 p-1"></i></button>
+              <button ><i class="fa-solid fa-trash-can bg-zinc-200 p-1"></i></button>
+              </span>
             </div>
-          ))}
-        </div>
+          {/* ))} */}
+   
       </div>
     </div>
   );
