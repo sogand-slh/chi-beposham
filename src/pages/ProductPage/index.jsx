@@ -15,7 +15,6 @@ const ProductPage = () => {
     if (!productsData.products.length) dispatch(fetchProducts());
   }, []);
 
-console.log(productsData.products);
   return (
     <div>
       <div className="border-b-4 border-darkColor m-5">
@@ -31,7 +30,7 @@ console.log(productsData.products);
         <p>Something with wrong</p>
       ) : (
        
-        <div className="grid grid-cols-4">
+        <div className="grid grid-cols-4 sm:grid-cols-3">
        { productsData?.products?.map((product) => (
           
             <Product key={product.id} productsData={product} />       

@@ -1,7 +1,8 @@
 import React from "react";
-
-const Header = () => {
-  return <div>Header</div>;
+import {useLocation} from  "react-router-dom";
+const ProductDetail = () => {
+  let location = useLocation();
+  return <div>ProductDetail</div>;
 };
 
-export default Header;
+export default ProductDetail;
