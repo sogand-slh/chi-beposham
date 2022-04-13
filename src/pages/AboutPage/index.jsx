@@ -1,14 +1,14 @@
 import React from "react";
-import Armitaj from "../../assets/images/armitaj.jpg";
-import commericalBrand from "../../assets/images/commericalimg.jpg";
-import aboutBrand1 from "../../assets/images/aboutimg-1.png";
-import aboutBrand2 from "../../assets/images/aboutimg-2.jpg";
-import aboutBrand3 from "../../assets/images/aboutImg-3.jpg";
+import Armitaj from "../../assets/images/armitaj.webp";
+import commericalBrand from "../../assets/images/commericalimg.webp";
+import aboutBrand1 from "../../assets/images/aboutimg-1.webp";
+import aboutBrand2 from "../../assets/images/aboutimg-2.webp";
+import aboutBrand3 from "../../assets/images/aboutImg-3.webp";
 
 const AboutPage = () => {
   return (
     <div className="w-full h-full">
-      <div className="flex justify-end self-center p-5">
+      <div className="grid grid-cols-2 justify-end self-center p-5">
         <span className="text-center leading-6">
           <h1 className="font-medium text-[#0a0909] ">OUR MISSION</h1>
           <p className="px-7 py-5 text-[#0a0909] ">
@@ -24,7 +24,7 @@ const AboutPage = () => {
         <img alt="" src={Armitaj} className="grayscale hover:grayscale-0"></img>
       </div>
 
-      <div className="flex justify-end self-center p-5">
+      <div className="grid grid-cols-2 justify-end self-center p-5">
         <img
           alt=""
           src={commericalBrand}
@@ -44,8 +44,8 @@ const AboutPage = () => {
         </span>
       </div>
 
-      <div className="flex flex-wrap justify-end self-center ">
-        <div className="flex flex-row	">
+      <div className="grid  justify-end self-center ">
+        <div className="grid grid-cols-2	">
           <span>
             <img
               alt=""
@@ -61,7 +61,7 @@ const AboutPage = () => {
             />
           </span>
         </div>
-        <span className="	">
+        <span className="">
           <img
             alt=""
             src={aboutBrand2}

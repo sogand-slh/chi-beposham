@@ -3,7 +3,7 @@ import React from "react";
 const ContactPage = () => {
   const handleSubmit = () => {};
   return (
-    <div className="flex w-full bg-[url('/src/assets/images/armitaj-map.png')] justify-between h-screen bg-cover bg-no-repeat p-5">
+    <div className="flex w-full bg-[url('/src/assets/images/armitaj-map.webp')] justify-between h-screen bg-cover bg-no-repeat p-5">
       <div className="flex flex-row self-center justify-center ">
         <div className="flex w-[400px] h-[420px] flex-col  ml-10 p-5 self-center bg-darkColor text-lightColor">
           <span className="flex justify-center font-medium text-2xl">

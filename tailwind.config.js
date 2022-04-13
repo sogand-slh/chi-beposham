@@ -22,7 +22,7 @@ module.exports = {
         10: "10%",
       },
       backgroundImage: {
-        "armitaj-map": "url('/src/assets/images/armitaj-map.png')",
+        "armitaj-map": "url('/src/assets/images/armitaj-map.webp')",
       },
       blur: {
         xs: "2px",

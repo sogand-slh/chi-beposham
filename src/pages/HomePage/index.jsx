@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 //Add other component
-import HeroImage from "../../assets/images/hi-2.jpg";
+import HeroImage from "../../assets/images/hi-2.webp";
 import Product from "../../components/ProductList";
 
 const Home = () => {
